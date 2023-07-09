@@ -13,10 +13,19 @@ public class PlayerObject implements GameObject {
     }
 
     @Override
-    public void move(double x, double y) {
-            coords.x = coords.x + x;
-            coords.y = coords.y + y;
+    public void setCoords(Vec2 vec) {
+        this.coords = new Vec2(vec);
     }
 
+    @Override
+    public void move(Vec2 vec) {
+        coords = coords.add(vec);
+    }
 
+    @Override
+    public String toString() {
+        return "PlayerObject{" +
+                "coords=" + coords +
+                '}';
+    }
 }

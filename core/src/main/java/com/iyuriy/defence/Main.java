@@ -13,11 +13,11 @@ public class Main {
     public static void main(String[] args) {
         ClockImpl clock = new ClockImpl();
         GameEngine engine = new GameEngine();
-        PlayerObject player = new PlayerObject(new Vec2(1.0, 1.2));
+        PlayerObject player = new PlayerObject(new Vec2(0, 0));
         AddObjectEvent playerEvent = new AddObjectEvent(player);
         engine.addEvent(clock.getTimestampIn(Duration.ofSeconds(2)), playerEvent);
         System.out.println("started");
-        MoveObjectEvent moveObjectEvent = new MoveObjectEvent(player);
+        MoveObjectEvent moveObjectEvent = new MoveObjectEvent(player, new Vec2(10, 10), 1);
         engine.addEvent(clock.getTimestampIn(Duration.ofSeconds(2)), moveObjectEvent);
         engine.start();
     }
