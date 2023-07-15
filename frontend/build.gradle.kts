@@ -7,9 +7,6 @@ plugins {
     id("org.jetbrains.compose")
 }
 
-group "com.iyuriy.defence"
-version "1.0-SNAPSHOT"
-
 repositories {
     google()
     mavenCentral()

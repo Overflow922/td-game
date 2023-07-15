@@ -7,7 +7,18 @@ plugins {
     `kotlin-dsl`
 }
 
+
+
 repositories {
     // Use the plugin portal to apply community plugins in convention plugins.
     gradlePluginPortal()
 }
+
+extra["versions"] = mapOf(
+    "kotlin.version" to "1.6.10",
+    "kotlin.code.style" to "official",
+    "kotlin.native.enableDependencyPropagation" to false,
+    "kotlin.js.webpack.major.version" to 4,
+    "agp.version" to "4.2.2",
+    "compose.version" to "1.1.0"
+)

@@ -8,4 +8,19 @@
  */
 
 rootProject.name = "td-game"
-include("core")
+
+include("frontend", "core")
+
+pluginManagement {
+    repositories {
+        google()
+        gradlePluginPortal()
+        mavenCentral()
+        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+    }
+
+    plugins {
+        kotlin("multiplatform").version("1.6.10")
+        id("org.jetbrains.compose").version("1.1.0")
+    }
+}
